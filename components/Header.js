@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Listbox from './ui/listBox'
+import Listbox from './ui/ListBox'
 import InputBox from './ui/InputBox'
 
 function Header() {
