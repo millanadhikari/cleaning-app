@@ -8,14 +8,14 @@ const people = [
  
 ]
 
-export default function listbox() {
+export default function SelectBox() {
   const [selected, setSelected] = useState(people[0])
 
   return (
-    <div className="">
+    <div className="w-full">
       <Listbox value={selected} onChange={setSelected}>
-        <div className="relative mt-1">
-          <Listbox.Button className="relative ml-2 py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+        <div className="relative mt-1 w-full">
+          <Listbox.Button className="relative w-full ml-2 py-2 pl-3 pr-10 text-left bg-white rounded-lg shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
             <span className="block truncate text-sm">{selected.name}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <SelectorIcon
@@ -30,7 +30,7 @@ export default function listbox() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute w-30 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {people.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}
@@ -49,16 +49,16 @@ export default function listbox() {
                       >
                         {person.name}
                       </span>
-                      {selected ? (
+                      {/* {selected ? (
                         <span
                           className={`${
                             active ? 'text-amber-600' : 'text-amber-600'
                           }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                         >
-                          {/* <CheckIcon className="w-5 h-5" aria-hidden="true" /> */}
+                          <CheckIcon className="w-5 h-5" aria-hidden="true" />
                         </span>
-                      ) : null}
+                      ) : null} */}
                     </>
                   )}
                 </Listbox.Option>
