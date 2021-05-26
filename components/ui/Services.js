@@ -1,22 +1,22 @@
 import Image from 'next/image'
 
-function Services() {
+function Services({name, details, src}) {
     return (
-        <div className="flex space-x-3 mt-5 items-center cursor-pointer">
+        <div className="w-80 flex space-x-2 mt-5 items-center cursor-pointer">
             <Image
-                className="rounded-xl transition
+                className="rounded-xl shadow-md transition: ;
                 duration-200 transform ease-in hover:scale-105 hover:rounded-xl"
-                src={'https://thearchitectsdiary.com/wp-content/uploads/2018/12/Hire-A-Cleaning-Service.jpg'}
-                height={100}
-                width={120}
+                src={src}
+                height={80}
+                width={90}
                 objectFit="cover"
                 // layout='fill'
                
                
                 />
             <span>
-            <h2 className="text-lg font-semibold">End of Lease Clean</h2>
-            <p className="text-md text-gray-600">starting from $199</p>
+            <h2 className="text-md font-semibold">{name}</h2>
+            <p className="text-sm text-gray-600">{details}</p>
             </span>
 
         </div>
