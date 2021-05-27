@@ -14,8 +14,8 @@ export default function inputbox() {
   return (
     <div className="w-full">
       <Listbox value={selected} onChange={setSelected}>
-        <div className="relative mt-2">
-          <Listbox.Button className="relative w-full py-2 pl-2 pr-5 text-left bg-white rounded-md shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+        <div className="relative">
+          <Listbox.Button className="relative w-full h-12 py-2 pl-2 pr-5 text-left bg-white rounded-md shadow-md cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
             <input placeholder='Choose a Service' className="block truncate py-2 text-sm"></input>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <SelectorIcon

@@ -26,7 +26,7 @@ const trusts = [
 
 function Trusts() {
     return (
-        <div className="mt-8 mb-4 min-w-screen scrollbar-hide lg:mx-auto">
+        <div className="mt-8 mb-4 h-full min-w-screen scrollbar-hide lg:mx-auto">
             <h1 className="header">Trusted Cleaning Experts at your door</h1>
             <div className="w-full mt-7 pl-5 flex flex-nowrap space-x-6 overflow-auto scrollbar-none">
            {trusts.map((trust) => (

@@ -22,7 +22,7 @@ function Header() {
             <div className="relative z-10 top-60 flex flex-col items-center ">
                 <h1 className="text-lg font-semibold text-gray-200">WeDo Cleaning</h1>
                 <h1 className="text-2xl font-bold text-gray-200">Home Services, on Demand.</h1>
-                <form className="flex text-center p-1">
+                <form className="flex text-center p-1 mt-4">
                     <select className="p-3 rounded-md">
                         <option>Sydney</option>
                         <option>Melbourne</option>
