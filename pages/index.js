@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SelectService from '../components/SelectService'
+import Trusts from '../components/Trusts'
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       </Head>
       <Header/>
       <SelectService/>
+      <Trusts/>
+      <Footer/>
     </div>
   )
 }

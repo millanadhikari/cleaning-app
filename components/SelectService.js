@@ -27,10 +27,10 @@ const services = [
 
 function SelectService() {
     return (
-        <div className="mt-40 m-5">
-            <h1 className="text-gray-900 text-2xl font-bold">Select a Service</h1>
-            <div className="w-full grid grid-rows-2 grid-cols-2 
-            gap-x-28 gap-y-4 overflow-x-auto scrollbar-hide ">
+        <div className="mt-40 scrollbar-hide sm:mx-auto">
+            <h1 className="header">Select a Service</h1>
+            <div className="w-full pl-5 grid grid-rows-2 grid-cols-2 
+            gap-x-28 gap-y-4 overflow-x-auto scrollbar-none ">
 
                 {services.map((service) => (
 
