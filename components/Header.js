@@ -6,47 +6,27 @@ import SelectService from './SelectService'
 
 function Header() {
     return (
-
-        <div className="relative h-80 bg-cover bg-center" style={{backgroundColor:"black",
-        backgroundImage: "linear-gradient(359deg, rgba(25,0,0,1) 5%, rgba(1,0,0,0) 80%, rgba(236,236,236,1) 100%), url(https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)"
-        }}>
-                {/* <Image
-                    style={{backgroundColor:"blue"}}
-                    wrapperclassName="bg-gradient"
-                    src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                    alt=""
-                    height={667}
-                    width={1000}
-                    objectFit='contain' /> */}
-
-            <div className="relative z-10 top-60 flex flex-col items-center ">
-                <h1 className="text-lg font-semibold text-gray-200">WeDo Cleaning</h1>
-                <h1 className="text-2xl font-bold text-gray-200">Home Services, on Demand.</h1>
-                <form className="flex text-center p-1 mt-4">
-                    <select className="p-3 rounded-md">
-                        <option>Sydney</option>
-                        <option>Melbourne</option>
-                    </select>
-                    {/* <input className="" placeholder="Choose a Service"/> */}
-                                     
-                    {/* <SelectBox/> */}
-                    
-                    <InputBox/>
-
-                    {/* <input className="rounded-md p-1 pl-2 ml-3" placeholder="Search for a service"></input> */}
-                </form>
-
+        <div className="flex justify-between items-center md:w-[60rem] max-w-screen md:mx-auto mt-3">
+            <h1 className="mx-2">Logo</h1>
+            <div className="flex mr-10 space-x-9 items-center">
+                <div className="hidden md:inline-block" >
+                    <ul className="flex space-x-7 font-semibold text-sm text-blue-800 cursor-pointer">
+                        <li>Home</li>
+                        <li>Services</li>
+                        <li>About</li>
+                        <li>Membership</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div className="flex text-sm gap-2">
+                    <h2>Login</h2>
+                    <p>|</p>
+                    <h2>Register</h2>
+                </div>
+                <div>
+                    <button class="text-sm bg-yellow-500 p-2 px-3 shadow-md text-yellow-100 font-semibold focus:ring-0 focus:outline-none">Book Now</button>
+                </div>
             </div>
-
-            <div className="relative h-full bg-gradient-to-t from-black via-black to-transparent text-red-900"></div>
-
-
-
-
-
-
-
-
 
 
         </div>

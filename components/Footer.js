@@ -1,7 +1,7 @@
 function Footer() {
     return (
-        <div className="w-full bg-black mt-5 p-5 text-gray-300">            
-        <ul className="font-semibold cursor-pointer flex flex-col gap-3">
+        <div className="w-full bg-black mt-5 p-5 text-gray-300 sm:mx-auto">            
+        <ul className="font-semibold cursor-pointer flex flex-col gap-3 sm:grid sm:grid-cols-2 sm:text-center ">
             <li className="hover:text-white">About US</li>
             <li className="hover:text-white">Terms & Conditions</li>
             <li className="hover:text-white">Privacy Policy</li>

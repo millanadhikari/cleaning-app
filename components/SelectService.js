@@ -25,7 +25,7 @@ const services = [
 
 ]
 
-function SelectService() {
+function SelectService({setIsopen}) {
     return (
         <div className="mt-40 scrollbar-hide sm:mx-auto">
             <h1 className="header">Select a Service</h1>
@@ -38,7 +38,8 @@ function SelectService() {
                         key={service.src}
                         name={service.name}
                         src={service.src}
-                        details={service.details} />
+                        details={service.details}
+                        setIsopen={setIsopen} />
 
 
                 ))}
