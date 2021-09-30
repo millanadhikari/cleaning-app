@@ -9,6 +9,7 @@ import Banner from '../components/Banner'
 import Trust from '../components/Trust'
 import Benefits from '../components/Benefits'
 import Howitworks from '../components/Howitworks'
+import DownloadApp from '../components/DownloadApp'
 
 export default function Home() {
   const [isOpen, setIsopen] = useState(false)
@@ -17,6 +18,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+
        
       </Head>
       {/* {isOpen && 
@@ -37,6 +39,7 @@ export default function Home() {
        <Trust/>
        <Benefits/>
        <Howitworks/>
+       <DownloadApp/>
 
   
 

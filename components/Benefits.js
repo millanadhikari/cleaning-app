@@ -4,7 +4,7 @@ function Benefits() {
     return (
         <div className="relative mt-8 md:flex md:mx-auto">
             <div className="w-1/2">
-                <div className="absolute left-2 top-2 rounded-sm shadow-md bg-blue-400 h-[7rem] w-[11rem] text-sm p-5 text-white">
+                <div className="absolute left-2 top-2 rounded-sm shadow-md bg-blue-400 h-[7.7rem] w-[11rem] text-sm p-5 text-white">
                     <h1 className="text-2xl">10+</h1>
                     <p>Years of</p>
                     <p>Experience Working</p>
