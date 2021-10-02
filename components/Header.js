@@ -4,7 +4,8 @@ import SelectBox from './ui/SelectBox'
 import InputBox from './ui/InputBox'
 import SelectService from './SelectService'
 
-function Header() {
+
+function Header({setIsopen, isOpen}) {
     return (
         <div className="flex justify-between items-center md:w-[60rem] max-w-screen md:mx-auto mt-3">
             <div className="flex flex-col space-y-[-6px]">
@@ -27,7 +28,12 @@ function Header() {
                     <h2>Register</h2>
                 </div>
                 <div className="">
-                    <button class="text-sm w-[6rem] bg-yellow-500 p-2 px-3 shadow-md text-yellow-50 ocus:ring-0 focus:outline-none">Book Now</button>
+                    <button 
+                        className="text-sm w-[6rem] bg-yellow-500 p-2 px-3 shadow-md text-yellow-50 ocus:ring-0 focus:outline-none"
+                        onClick={() => setIsopen(!isOpen)}
+                        >Book Now
+                    </button>
+                       
                 </div>
             </div>
 

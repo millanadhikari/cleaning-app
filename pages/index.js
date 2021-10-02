@@ -10,6 +10,8 @@ import Trust from '../components/Trust'
 import Benefits from '../components/Benefits'
 import Howitworks from '../components/Howitworks'
 import DownloadApp from '../components/DownloadApp'
+import Book from '../components/Booking/Book'
+
 
 export default function Home() {
   const [isOpen, setIsopen] = useState(false)
@@ -34,12 +36,18 @@ export default function Home() {
       {/* <Footer/> */}
 
        <TopHeader/>
-       <Header/>
+       <Header isOpen={isOpen} setIsopen={setIsopen}/>
        <Banner/>
        <Trust/>
        <Benefits/>
        <Howitworks/>
        <DownloadApp/>
+       {isOpen && 
+       <div className="absolute top-0 w-full">
+          <Book/>
+       </div>
+       
+       }
 
   
 
