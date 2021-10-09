@@ -43,8 +43,8 @@ export default function Home() {
        <Howitworks/>
        <DownloadApp/>
        {isOpen && 
-       <div className="absolute top-0 w-full">
-          <Book/>
+       <div className="absolute w-full">
+          <Book isOpen={isOpen} setIsopen={setIsopen}/>
        </div>
        
        }

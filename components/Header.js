@@ -29,7 +29,7 @@ function Header({setIsopen, isOpen}) {
                 </div>
                 <div className="">
                     <button 
-                        className="text-sm w-[6rem] bg-yellow-500 p-2 px-3 shadow-md text-yellow-50 ocus:ring-0 focus:outline-none"
+                        className="text-sm w-[6rem] bg-yellow-500 p-2 px-3 shadow-md text-yellow-50 focus:ring-0 focus:outline-none"
                         onClick={() => setIsopen(!isOpen)}
                         >Book Now
                     </button>
