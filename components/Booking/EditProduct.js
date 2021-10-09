@@ -44,11 +44,11 @@ function EditProduct({ title, firstSub, editPackage, setEditPackage }) {
                         </div>
                         <div className="flex items-center gap-2 text-sm">
                             <Checkbox color="primary" />
-                            <p>Laundry room</p>
+                            <p>Laundry rooms</p>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
                             <Checkbox color="primary" />
-                            <p>Large balcony (15.3-sqm_</p>
+                            <p>Large balcony (15.3-sqm)</p>
                         </div>
                         <div className="flex items-center gap-2 text-sm">
                             <Checkbox color="primary" />
