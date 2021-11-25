@@ -11,6 +11,7 @@ import Benefits from '../components/Benefits'
 import Howitworks from '../components/Howitworks'
 import DownloadApp from '../components/DownloadApp'
 import Book from '../components/Booking/Book'
+import Services from '../components/Services'
 
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
        </div>
        
        }
+       <Services/>
 
   
 

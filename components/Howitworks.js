@@ -3,7 +3,7 @@
 
 function Howitworks() {
     return (
-        <div className="flex flex-col text-center py-4 bg-gray-200 my-5">
+        <div className="flex flex-col text-center py-4 bg-gray-200 py-5">
             <h2 className="text-[0.8rem] text-blue-400 font-semibold">- HOW IT WORKS -</h2>
             <div className="flex flex-col">
                 <h1 className="text-[1.3rem] font-semibold text-gray-800">Get amazing cleaning in</h1>

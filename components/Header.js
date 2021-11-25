@@ -9,8 +9,9 @@ function Header({setIsopen, isOpen}) {
     return (
         <div className="flex justify-between items-center md:w-[60rem] max-w-screen md:mx-auto mt-3">
             <div className="flex flex-col space-y-[-6px]">
-            <h1 className="mx-2 text-blue-400 font-semibold font-fancy text-3xl">We<span className="text-blue-900">Do</span></h1>
-            <p className="text-[0.7rem] pl-7">Cleaning</p>
+            {/* <h1 className="mx-2 text-blue-400 font-semibold font-fancy text-3xl">We<span className="text-blue-900">Do</span></h1> */}
+            <img src="unnamed.png" className="h-[80px] w-[80px]object-contain "/>
+            
             </div>
             <div className="flex mr-10 space-x-9 items-center">
                 <div className="hidden md:inline-block" >
