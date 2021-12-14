@@ -19,7 +19,7 @@ import SignIn from '../components/SignIn'
 function LoginNew({handleLogin}) {
     const [signEmail, setSignEmail] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-    const [method, setMethod] = useState('');
+    const [method, setMethod] = useState('signIn');
 
 
     
@@ -36,16 +36,23 @@ function LoginNew({handleLogin}) {
 
 
     return (
-        <div className="w-full absolute top-0 left-0 h-screen bg-gray-500 z-10">
-            <div className="max-w-[25rem] relative mx-auto bg-white m-3 rounded-md px-3 py-4 flex flex-col gap-4 bg-scroll">
+        <div className="w-full absolute top-0 left-0 h-screen bg-gray-500 z-10 overflow-y-auto">
+            <div className="max-w-[25rem] mx-3 sm:mx-auto my-20 relative bg-white rounded-md px-8 py-4 flex flex-col gap-4 bg-scroll ">
                 <CloseIcon onClick = {handleLogin} className="absolute right-2" />
-                <div className="flex justify-between px-16 mt-10 mb-4">
-                    <h1 onClick={()=>handleClick('signIn')}>Sign in</h1>
-                    <h2 onClick={()=>handleClick("signUp")}>Register</h2>
+                <div className="flex justify-between px-6 mt-10 mb-4 w-full">
+
+                    
+                    <h1 onClick={()=>handleClick('signIn')}
+                        className={`${method === "signIn" ? 'border-gray-700' : 'border-gray-200'} border-b-2 pb-2 w-1/2 text-center`}>Sign in</h1>
+
+
+                    <h2 onClick={()=>handleClick("signUp")}
+                     className={`${method === "signUp" ? 'border-gray-700' : 'border-gray-200'} border-b-2 pb-2 w-1/2 text-center`}
+                     >Register</h2>
                 </div>
               {method === 'signIn' ? 
                 <SignIn/> : 
-                <SignUp/>}
+                <SignUp handleClick={handleClick}/>}
             </div>
         </div>
     )

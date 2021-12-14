@@ -23,6 +23,8 @@ function SignIn() {
     const dispatch = useDispatch()
     const { isLoading, isAuth, error } = useSelector(state => state.login)
     let [color, setColor] = useState("#63b5f6");
+    const [loading, setLoading] = useState(false);
+
 
     const startLogin = async (e) => {
         e.preventDefault();
@@ -37,7 +39,7 @@ function SignIn() {
                return dispatch(loginFailure(isAuth.message))
             }
             dispatch(loginSuccess())
-             router.push("/payment")
+             router.push("/dateTime")
         } catch (error) {
             dispatch(loginFailure(error.message));
         }
@@ -55,25 +57,25 @@ function SignIn() {
     return (
         <div>
             <div className=" flex flex-col gap-5">
-                    <div className="cursor-pointer bg-blue-500 rounded-md p-3 text-white flex gap-16 items-center">
+                    <div className="cursor-pointer bg-blue-500 rounded-md p-3 text-white flex gap-9 sm:gap-14 items-center">
                         <FacebookIcon />
                         <p className="text-center text-sm">Continue with <span className="font-semibold">Facebook</span></p>
                     </div>
-                    <div className="cursor-pointer shadow-md rounded-md p-3 text-gray-400 flex gap-16 items-center text-center">
+                    <div className="cursor-pointer shadow-md rounded-md p-3 text-gray-400 flex gap-12 sm:gap-16 items-center text-center">
                         <img src="/googleonly.png" className="h-6 w-6 bg-no-repeat bg-top" />
                         <p className="text-center text-sm">Sign in with <span className="font-semibold">Google </span></p>
                     </div>
-                    <div className="cursor-pointer ring-1 ring-gray-900 shadow-md rounded-md p-3 text-gray-900 flex gap-16 items-center">
+                    <div className="cursor-pointer ring-1 ring-gray-900 shadow-md rounded-md p-3 text-gray-900 flex gap-12 sm:gap-14 items-center">
                         <img src="/appleLogo.png" className="h-6 w-7 bg-no-repeat bg-top" />
                         <p className="text-center text-sm">Continue with <span className="font-semibold">Apple</span></p>
                     </div>
                 </div>
 
-                <div className="flex items-center justify-center gap-5 my-2">
+                <div className="flex items-center justify-center gap-2 my-6">
                     <p>
                         <hr className="w-32 text-gray-500" />
                     </p>
-                    <p>Or</p>
+                    <p className="text-gray-500 text-sm">Or</p>
                     <hr className="w-32 text-gray-500" />
 
                 </div>
@@ -82,7 +84,7 @@ function SignIn() {
                         {!signEmail &&
                             <button
                                 onClick={() => { setSignEmail(!signEmail) }}
-                                className="cursor-pointer bg-yellow-500 p-3 rounded-md text-yellow-50">
+                                className="cursor-pointer bg-yellow-500 p-3 rounded-md text-yellow-50 text-md">
                                 Sign in with email
                             </button>
                         }
@@ -102,6 +104,7 @@ function SignIn() {
                                     <TextField
                                         id="outlined-name"
                                         label="Password"
+                                        type={showPassword ? "text" : "password"}
                                         onChange={(text) => setPassword(text.target.value)}
                                         fullWidth="true"
                                         margin="normal"
@@ -132,13 +135,13 @@ function SignIn() {
                             </div>}
 
                     </div>
-                    <h2 className="text-blue-600 text-sm">Forgot password?</h2>
+                    <h2 className="text-blue-500 text-sm">Forgot password?</h2>
                 </div>
                 <hr className="my-5"/>
-                <div className="flex flex-col items-center ">
-                    <div className="flex gap-2 justify-center align-center text-gray-600">
+                <div className="flex flex-col items-center gap-2">
+                    <div className="flex gap-2 justify-center align-center text-gray-600 text-sm">
                         <h1>Have you booked via phone/chat?</h1>
-                        <InfoOutlinedIcon color="primary" />
+                        <InfoOutlinedIcon color="primary" fontSize="small" />
                     </div>
                     <h2 className="underline text-yellow-500 text-sm font-semibold">Claim your account</h2>
                 </div>

@@ -8,7 +8,7 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import Checkbox from '@mui/material/Checkbox';
 
-function Signup() {
+function Signup({handleClick}) {
     const [signEmail, setSignEmail] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
 
@@ -16,31 +16,31 @@ function Signup() {
         <div className="text-center">
             <div className="text-[0.9rem] text-gray-600 flex flex-col gap-3 mb-5">
                 <h1>Already have an account?</h1>
-                <h2 className="underline">Click here to log in </h2>
+                <h2 className="underline" onClick={() => handleClick('signIn')}>Click here to log in </h2>
             </div>
             <div className=" flex flex-col gap-5">
-                <div className="cursor-pointer bg-blue-500 rounded-md p-3 text-white flex gap-16 items-center">
+                <div className="cursor-pointer bg-blue-500 rounded-md p-3 text-white flex gap-9 sm:gap-14 items-center">
                     <FacebookIcon />
                     <p className="text-center text-sm">Continue with <span className="font-semibold">Facebook</span></p>
                 </div>
-                <div className="cursor-pointer shadow-md rounded-md p-3 text-gray-400 flex gap-16 items-center">
+                <div className="cursor-pointer shadow-md rounded-md p-3 text-gray-400 flex gap-12 sm:gap-16 items-center">
                     <img src="/googleonly.png" className="h-6 w-6 bg-no-repeat bg-top" />
                     <p className="text-center text-sm">Sign up with <span className="font-semibold">Google </span></p>
                 </div>
-                <div className="cursor-pointer ring-1 ring-gray-900 shadow-md rounded-md p-3 text-gray-900 flex gap-16 items-center">
+                <div className="cursor-pointer ring-1 ring-gray-900 shadow-md rounded-md p-3 text-gray-900 flex gap-12 sm:gap-14 items-center">
                     <img src="/appleLogo.png" className="h-6 w-7 bg-no-repeat bg-top" />
                     <p className="text-center text-sm">Continue with <span className="font-semibold">Apple</span></p>
                 </div>
             </div>
 
-            <div className="flex items-center justify-center gap-4 my-2">
-                <p>
+            <div className="flex items-center justify-center gap-2 my-6">
+                    <p>
+                        <hr className="w-32 text-gray-500" />
+                    </p>
+                    <p className="text-gray-500 text-sm">Or</p>
                     <hr className="w-32 text-gray-500" />
-                </p>
-                <p>Or</p>
-                <hr className="w-32 text-gray-500" />
 
-            </div>
+                </div>
             <div className="flex flex-col gap-5 ">
                 <div className="flex flex-col">
                     {!signEmail &&
@@ -79,6 +79,8 @@ function Signup() {
                                 <TextField
                                     id="outlined-name"
                                     label="Password"
+                                    type={showPassword ? "text" : "password"}
+
                                     fullWidth="true"
                                     margin="normal"
                                     size="medium"
@@ -109,13 +111,13 @@ function Signup() {
                 <h2 className="text-blue-600 text-sm text-left">Forgot password?</h2>
             </div>
             <hr className="my-3"/>
-            <div className="flex flex-col items-center ">
-                <div className="flex gap-2 justify-center align-center text-gray-600">
-                    <h1>Have you booked via phone/chat?</h1>
-                    <InfoOutlinedIcon color="primary" />
+            <div className="flex flex-col items-center gap-2">
+                    <div className="flex gap-2 justify-center align-center text-gray-600 text-sm">
+                        <h1>Have you booked via phone/chat?</h1>
+                        <InfoOutlinedIcon color="primary" fontSize="small" />
+                    </div>
+                    <h2 className="underline text-yellow-500 text-sm font-semibold">Claim your account</h2>
                 </div>
-                <h2 className="underline text-yellow-500 font-semibold text-sm">Claim your account</h2>
-            </div>
         </div>
     )
 }

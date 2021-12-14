@@ -4,20 +4,15 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     products: [],
-    furnished:false,
-    steam:[
-    //   {
-    //   vaccummedOnly: false,
-    //   steamClean:false,
-    //   bedroom:0,
-    //   livingRoom:0,
-    //   hallway:0,
-    //   staircase:0
-    // }
-  ],
+    furnished: false,
+    steam: [
+
+    ],
+    bookingDate: '',
+    time: '',
     quantity: 0,
     total: 0,
-    stripeData:[]
+    stripeData: []
   },
   reducers: {
     addProduct: (state, action) => {
@@ -31,18 +26,32 @@ const cartSlice = createSlice({
       state.quantity -= 1;
       state.products = state.products.filter(p => p.id !== action.payload.id)
       state.total -= action.payload.price * action.payload.quantity
-      
+
     },
     addStripe: (state, action) => {
       state.stripeData.push(action.payload)
     },
-    addFurnished:(state, action) => {
+    addFurnished: (state, action) => {
       state.furnished = action.payload
     },
-    addSteam:(state, action) => {
+    addSteam: (state, action) => {
       state.steam = action.payload
+    },
+    addBookingDate: (state, action) => {
+      state.bookingDate = action.payload
+    },
+    addTime: (state, action) => {
+      state.time = action.payload
     }
-  }})
+  }
+})
 
-export const { addProduct, removeProduct, addStripe, addFurnished, addSteam } = cartSlice.actions;
+export const {
+  addProduct,
+  removeProduct,
+  addStripe,
+  addFurnished,
+  addSteam,
+  addBookingDate,
+  addTime } = cartSlice.actions;
 export default cartSlice.reducer;

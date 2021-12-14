@@ -48,6 +48,7 @@ function payment() {
     }, [stripeToken, router])
     return (
         <div>
+            
             <StripeCheckout
                 name="Wedo Cleaning Services"
                 image=""
