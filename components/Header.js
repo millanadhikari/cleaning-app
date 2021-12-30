@@ -23,7 +23,7 @@ function Header({setIsopen, isOpen}) {
                         <li>Contact</li>
                     </ul>
                 </div>
-                <div className="flex text-sm gap-1">
+                <div className="flex text-sm gap-1 text-red-500">
                     <h2>Login</h2>
                     <p>|</p>
                     <h2>Register</h2>
