@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col overflow-x-hidden">
       <Head>
-        <title>Create Next App</title>
+        <title>WeDo Cleaning Services</title>
         <link rel="icon" href="/favicon.ico" />
 
        
